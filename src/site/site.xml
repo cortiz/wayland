@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2007-2014 JMPEAX.
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="Wayland"
+         xmlns="http://maven.apache.org/DECORATION/1.3.0"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
+
+    <bannerLeft>
+        <name>
+            ${project.name}
+        </name>
+        <href>/index.html</href>
+    </bannerLeft>
+    <publishDate position="bottom" format="yyyy-MM-dd" />
+    <version position="bottom" />
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.5</version>
+    </skin>
+    <!--<custom>-->
+        <!--<reflowSkin>-->
+            <!--&lt;!&ndash; Make this to 'false' for local developmexnt, i.e. file:// URLs &ndash;&gt;-->
+            <!--<protocolRelativeURLs>false</protocolRelativeURLs>-->
+            <!--<smoothScroll>true</smoothScroll>-->
+            <!--<theme>bootswatch-spacelab</theme>-->
+            <!--<highlightJs>true</highlightJs>-->
+            <!--<highlightJsTheme>github</highlightJsTheme>-->
+            <!--<absoluteResourceURL>http://cortiz.github.io/wayland/</absoluteResourceURL>-->
+            <!--<brand>-->
+                <!--&lt;!&ndash; Brand text in top-left part of the site &ndash;&gt;-->
+                <!--<name>${project.name}</name>-->
+                <!--<href>/index.html</href>-->
+            <!--</brand>-->
+            <!--<slogan>${project.description}</slogan>-->
+            <!--<titleTemplate>%2$s | %1$s</titleTemplate>-->
+            <!--&lt;!&ndash; Use Table of Contents at the top of the page (max 6 elements) &ndash;&gt;-->
+            <!--<toc>top</toc>-->
+            <!--<tocTopMax>6</tocTopMax>-->
+            <!--&lt;!&ndash; Include the documentation and tools in the top navigation (in addition to links) &ndash;&gt;-->
+            <!--<topNav>Documentation|Tools|Contribute</topNav>-->
+            <!--&lt;!&ndash; Split menus in the bottom navigation &ndash;&gt;-->
+            <!--<bottomNav maxSpan="9" >-->
+                <!--<column>Main|Tools</column>-->
+                <!--<column>Download|Contribute</column>-->
+                <!--<column>Documentation</column>-->
+                <!--<column>Reports</column>-->
+            <!--</bottomNav>-->
+            <!--<pages>-->
+                <!--<index project="reflow-parent">-->
+                    <!--&lt;!&ndash; Override the title &ndash;&gt;-->
+                    <!--<titleTemplate>${project.description}</titleTemplate>-->
+                    <!--&lt;!&ndash; no breadcrumbs on the main index page &ndash;&gt;-->
+                    <!--<breadcrumbs>false</breadcrumbs>-->
+                    <!--&lt;!&ndash; no ToC on the main index page &ndash;&gt;-->
+                    <!--<toc>false</toc>-->
+                    <!--<markPageHeader>false</markPageHeader>-->
+                    <!--<sections>-->
+                        <!--<carousel />-->
+                        <!--<columns>2</columns>-->
+                        <!--<body />-->
+                        <!--<sidebar />-->
+                    <!--</sections>-->
+                <!--</index>-->
+                <!--<contribute>-->
+                    <!--<breadcrumbs>false</breadcrumbs>-->
+                <!--</contribute>-->
+                <!--&lt;!&ndash; Disable source highlighting for Maven reports &ndash;&gt;-->
+                <!--<source-repository>-->
+                    <!--<highlightJs>false</highlightJs>-->
+                <!--</source-repository>-->
+                <!--<issue-tracking>-->
+                    <!--<highlightJs>false</highlightJs>-->
+                    <!--<toc>false</toc>-->
+                <!--</issue-tracking>-->
+                <!--<license>-->
+                    <!--<highlightJs>false</highlightJs>-->
+                    <!--<toc>false</toc>-->
+                <!--</license>-->
+                <!--&lt;!&ndash; Disable ToC for some Maven reports &ndash;&gt;-->
+                <!--<project-info>-->
+                    <!--<toc>false</toc>-->
+                <!--</project-info>-->
+                <!--<github-report>-->
+                    <!--<toc>false</toc>-->
+                <!--</github-report>-->
+                <!--<dependencies>-->
+                    <!--<tocTopMax>4</tocTopMax>-->
+                <!--</dependencies>-->
+            <!--</pages>-->
+        <!--</reflowSkin>-->
+    <!--</custom>-->
+
+    <body>
+        <!-- Add a rel to Google profile for all pages -->
+        <head>
+            <!--<link rel="author" href="https://github.com/cortiz/" />-->
+        </head>
+        <menu name="Main" inherit="top">
+            <item name="Home" href="./" />
+            <item name="GitHub project" href="https://github.com/cortiz/wayland/" />
+            <item name="Release notes" href="release-notes.html" />
+        </menu>
+        <menu name="Documentation" inherit="top">
+            <item name="Usage" href="usage.html" />
+            <item name="License" href="license.html" />
+            <item name="Javadoc" href="apidocs/index.html" />
+        </menu>
+        <menu name="Reports" inherit="top">
+            <item name="Issues" href="github-report.html"/>
+            <item name="Test" href="surefire-report.html"/>
+            <item name="Coverage" href="jacoco/index.html"/>
+            <item name="Checkstyle" href="checkstyle.html"/>
+        </menu>
+        <menu name="Contribute" inherit="bottom">
+            <item name="Contribute" href="contribute.html" />
+            <item name="Issues" href="https://github.com/cortiz/wayland/issues" />
+            <item name="Fork on GitHub" href="https://github.com/cortiz/wayland/" />
+            <!--<item name="Donate"-->
+                  <!--href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=S5JBLTXGFF5SG" />-->
+        </menu>
+
+    </body>
+</project>
