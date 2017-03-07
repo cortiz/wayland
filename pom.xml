@@ -7,6 +7,7 @@
     <artifactId>wayland</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Wayland</name>
+    <url>https://cortiz.github.io/wayland/git </url>
     <description>A Java CLI Toolkit</description>
     <licenses>
         <license>
@@ -19,22 +20,33 @@
         <developer>
             <id>cortiz</id>
             <name>Carlos Ortiz</name>
-            <email>chrono.dark@gmail.com</email>
+            <url>https://github.com/cortiz</url>
         </developer>
     </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <github.global.server>cortiz.github</github.global.server>
+        <github.global.server>github</github.global.server>
     </properties>
 
-    <scm>
-        <connection>scm:git:git://github.com/cortiz/wayland</connection>
-        <developerConnection>scm:git:git://github.com/cortiz/wayland</developerConnection>
-        <url>scm:git:git://github.com/cortiz/wayland</url>
-    </scm>
+    <distributionManagement>
+        <site>
+            <id>github</id>
+            <url>scm:git:ssh://git@github.com/cortiz/wayland.git</url>
+        </site>
+    </distributionManagement>
 
+    <issueManagement>
+        <url>https://github.com/cortiz/wayland/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <scm>
+        <url>https://github.com/cortiz/wayland</url>
+        <connection>scm:git:git://github.com/cortiz/wayland.git</connection>
+        <developerConnection>scm:git:git@github.com:cortiz/wayland.git</developerConnection>
+    </scm>
 
     <build>
         <testResources>
@@ -402,6 +414,7 @@
                         <version>0.12</version>
                         <configuration>
                             <message>Creating site for ${project.version}-${buildNumber}</message>
+                            <server>github</server>
                         </configuration>
                         <executions>
                             <execution>
