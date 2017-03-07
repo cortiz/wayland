@@ -125,7 +125,7 @@
         <menu name="Reports" inherit="top">
             <item name="Issues" href="github-report.html"/>
             <item name="Test" href="surefire-report.html"/>
-            <item name="Coverage" href="jacoco/index.html"/>
+            <item name="Coverage" href="cobertura/index.html"/>
             <item name="Checkstyle" href="checkstyle.html"/>
         </menu>
         <menu name="Contribute" inherit="bottom">
